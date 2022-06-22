@@ -42,7 +42,7 @@ const  Navbar=() =>{
             <ul className='nav-ul'>
             <Fragment>
                 <li className='nav-item' onClick={navToggle}>
-                <NavLink className="nav-link" to="/">Accueil</NavLink>
+                <NavLink className="nav-link" to="/etude">Accueil</NavLink>
                
                 </li>
                 <li className='nav-item'  onClick={navToggle}>

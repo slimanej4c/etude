@@ -167,6 +167,12 @@ a:hover::before {
       transform: translateX(0%);
       transition: 0.5s ease-in;
 }
+.nav-item {
+ 
+  margin-top: 0px;
+  margin-left: 10px;
+
+}
 .logo-nav{
   position: absolute;
   height:5rem;
@@ -284,7 +290,12 @@ a:hover::before {
   }
 
   @media screen and (max-width: 550px) {
-
+    .nav-item {
+ 
+      margin-top: 0px;
+      margin-left: 7px;
+    
+    }
 
     .nav-link{
    
@@ -315,14 +326,19 @@ a:hover::before {
   }
 
   @media screen and (max-width: 390px) {
-
+    .nav-item {
+ 
+      margin-top: 0px;
+      margin-left: 4px;
+    
+    }
 
     .nav-link{
    
       top:50%;
      
       
-       font-size: 8px;
+       font-size: 10px;
      
     }
     .logo-nav{

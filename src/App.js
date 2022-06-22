@@ -16,7 +16,7 @@ function App(props){
     <Layout>
      <AnimatePresence exitBeforeEnter>
     <Routes  key={location.pathname} location={location}>
-     <Route exact path='/' element={<Home/>}></Route>
+     <Route exact path='/etude' element={<Home/>}></Route>
      <Route exact path='/Profile' element={<Profile/>}></Route>
      <Route exact path='/Deplome' element={<Deplome/>}></Route>
     
