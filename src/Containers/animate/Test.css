@@ -1,0 +1,27 @@
+.h-test{
+
+    font-size: 6rem;
+    font-weight: 600;
+    color:#00F6FF;
+}
+
+.s-test{
+
+    display: inline-block;
+    margin-right: 0.25em;
+    white-space: nowrap;
+}
+.s-s-test{
+
+    display: inline-block;
+  margin-right: -0.05em;
+}
+
+@media screen and (max-width: 768px) {
+  .h-test{
+    font-size: 2rem;
+
+  }
+
+
+}
