@@ -292,7 +292,7 @@ a:hover::before {
   @media screen and (max-width: 550px) {
     .nav-item {
  
-      margin-top: 0px;
+      margin-top: 40px;
       margin-left: 7px;
     
     }
@@ -328,7 +328,7 @@ a:hover::before {
   @media screen and (max-width: 390px) {
     .nav-item {
  
-      margin-top: 0px;
+      margin-top: 45px;
       margin-left: 4px;
     
     }
