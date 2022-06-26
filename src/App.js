@@ -8,6 +8,8 @@ import {useLocation} from "react-router"
 import Profile from "./Containers/Profile";
 import Deplome from "./Containers/Deplome";
 import { motion , AnimatePresence  } from 'framer-motion';
+import Experiece from "./Containers/Experiece";
+import Contact from "./Containers/Contact";
 function App(props){
    const location=useLocation()
   return (
@@ -17,8 +19,8 @@ function App(props){
      <AnimatePresence exitBeforeEnter>
     <Routes  key={location.pathname} location={location}>
      <Route exact path='/etude' element={<Home/>}></Route>
-     <Route exact path='/Profile' element={<Profile/>}></Route>
-     <Route exact path='/Deplome' element={<Deplome/>}></Route>
+     <Route exact path='/experience' element={<Experiece/>}></Route>
+     <Route exact path='/contact' element={<Contact/>}></Route>
     
     </Routes>
     </AnimatePresence>

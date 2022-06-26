@@ -3,6 +3,7 @@ import { motion , AnimatePresence  } from 'framer-motion';
 import './css/Home.css'
 import AnimatePage from './AnimatePage';
 import Test from './animate/Test';
+
 const home =()=> {
   return (
     <AnimatePage>
@@ -15,7 +16,7 @@ const home =()=> {
         </div>
 
         <div className='about-home'>
-
+             
            </div>
      
       </div>

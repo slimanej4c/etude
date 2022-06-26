@@ -5,7 +5,8 @@
     height: 1200px;
     background-color: rgb(255, 255, 255);
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 80px;
+    margin: auto;
   
 
    
@@ -40,23 +41,27 @@
 
 }
 
+@media screen and (max-width: 950px) {
 
+    .text-image-home{
+
+        position: relative;
+         margin-top: 30%;
+           
+         }
+}
 @media screen and (max-width: 768px) {
 
 
     .text-image-home{
 
-
    position: relative;
     margin-top: 20%;
-        
-       
-     
-    
+      
     }
     .container-home{
 
-        margin-top: 100px;
+        margin-top: 140px;
     }
     .image-home{
 

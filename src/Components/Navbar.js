@@ -24,21 +24,22 @@ const  Navbar=() =>{
   };
   return (
     <div className={active}>
+          <div className='icon-logo'>
 
-       <div onClick={navToggle} className={icon} >
-        <div className="line11"></div>
-        <div className="line22"></div>
-        <div className="line33"></div>
-        </div>
+            <div onClick={navToggle} className={icon} >
+              <div className="line11"></div>
+              <div className="line22"></div>
+              <div className="line33"></div>
+              </div>
 
-     
+              <div className={show_logo}>
 
+
+              </div>
+          </div>
 
         <div className='nav-container'>
-        <div className={show_logo}>
-
-
-           </div>
+       
             <ul className='nav-ul'>
             <Fragment>
                 <li className='nav-item' onClick={navToggle}>
@@ -46,23 +47,23 @@ const  Navbar=() =>{
                
                 </li>
                 <li className='nav-item'  onClick={navToggle}>
-                <NavLink className="nav-link" to="/profile">QUI SOMMES-NOUS</NavLink>
+                <NavLink className="nav-link" to="/aprops">QUI SOMMES-NOUS</NavLink>
                 </li>
                 <li className='nav-item'  onClick={navToggle}>
-                <NavLink className="nav-link" to="/Deplome">Déplome et Formationn</NavLink>
+                <NavLink className="nav-link" to="/contact">CONTACT</NavLink>
                 </li>
                 <li className='nav-item'  onClick={navToggle}>
-                <NavLink className="nav-link" to="/">Expérience Proffessionel</NavLink>
+                <NavLink className="nav-link" to="/experience">NOS REALISATON</NavLink>
                 </li>
             </Fragment>
             </ul>
         </div>
 
+     
+       
         <div className='input-nav'>
 
         </div>
-       
-        
         
     </div>
   )
