@@ -204,7 +204,7 @@
   }
 
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 761px) {
     .container-right{
         width: 80%;
         height: 70%;

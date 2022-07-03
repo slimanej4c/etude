@@ -19,6 +19,12 @@
   height: 100px;
   border-radius: 10px;
 }
+h2 {
+  color: rgb(0, 55, 57);
+
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 
 .right-arrow {
@@ -68,6 +74,7 @@
   from {left: -300px; transform: scale(2);;opacity: 0.5;}
   to {left: 0px; transform:   scale(1);opacity: 1;}
 }
+
 .slide_plus {
   display: flex;
   flex-direction: column;
@@ -171,6 +178,16 @@
     margin-right: 50px;
     
   }
+  .right-arrow {
+   
+    font-size: 2.5rem;
+   
+  }
+  
+  .left-arrow {
+    font-size: 2.5rem;
+  }
+  
 
 }
 @media screen and (max-width: 710px) {
@@ -183,6 +200,16 @@
   h2 {
 
     font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .right-arrow {
+   
+    font-size: 2.1rem;
+   
+  }
+  
+  .left-arrow {
+    font-size: 2.1rem;
   }
 
 
@@ -198,6 +225,16 @@
   h2 {
 
     font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .right-arrow {
+   
+    font-size: 2rem;
+   
+  }
+  
+  .left-arrow {
+    font-size: 2rem;
   }
 
 
@@ -213,6 +250,16 @@
   h2 {
 
     font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .right-arrow {
+   
+    font-size: 1.8rem;
+   
+  }
+  
+  .left-arrow {
+    font-size: 1.8rem;
   }
 
 
@@ -227,6 +274,7 @@
   h2 {
 
     font-size: 11px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
 
