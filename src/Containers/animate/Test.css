@@ -1,8 +1,11 @@
 .h-test{
 
-    font-size: 6rem;
-    font-weight: 600;
-    color:#00F6FF;
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+    color:#003f4e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(240, 255, 255,0.5);
 }
 
 .s-test{
@@ -16,9 +19,15 @@
     display: inline-block;
   margin-right: -0.05em;
 }
+@media screen and (max-width: 1100px) {
+  .h-test{
+    font-size: 2.5rem;
+
+  }
+}
 @media screen and (max-width: 1090px) {
   .h-test{
-    font-size: 4.5rem;
+    font-size: 2rem;
 
   }
 
@@ -26,7 +35,7 @@
 }
 @media screen and (max-width: 950px) {
   .h-test{
-    font-size: 3.5rem;
+    font-size: 1.5rem;
 
   }
 
@@ -35,7 +44,7 @@
 
 @media screen and (max-width: 768px) {
   .h-test{
-    font-size: 2rem;
+    font-size: 1.2rem;
 
   }
 
@@ -44,14 +53,14 @@
 @media screen and (max-width: 550px) {
 
   .h-test{
-    font-size: 1.5rem;
+    font-size: 1rem;
 
   }
 }
 @media screen and (max-width: 390px) {
 
   .h-test{
-    font-size: 1.3rem;
+    font-size: 0.8rem;
 
   }
 

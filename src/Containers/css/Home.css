@@ -1,16 +1,41 @@
 .container-home{
 
     display: flex;
+    flex-direction: column;
     width:100%;
     height: 1200px;
     background-color: rgb(255, 255, 255);
     justify-content: center;
-    margin-top: 80px;
-    margin: auto;
+    align-items: center;
   
 
    
    /* animation: move 1s ease;*/
+}
+
+.presentation-home{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.presentation-home h1{
+
+   color: rgb(0, 229, 255);
+   font-weight: bold;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   text-decoration-line: underline;
+}
+.about-home{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    height: 400px;
+    margin-bottom: 200px;
+
 }
 
 .image-home{
@@ -18,6 +43,7 @@
     position: relative;
     align-items: center;
     justify-content: center;
+
 
     width:100%;
     height: 500px;
@@ -32,11 +58,13 @@
 
 .text-image-home{
 
-
-    position: absolute;
-
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    justify-content: center;
     
-    bottom: 0px;
+   
  
 
 }

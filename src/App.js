@@ -10,6 +10,7 @@ import Deplome from "./Containers/Deplome";
 import { motion , AnimatePresence  } from 'framer-motion';
 import Experiece from "./Containers/Experiece";
 import Contact from "./Containers/Contact";
+
 function App(props){
    const location=useLocation()
   return (
@@ -25,6 +26,7 @@ function App(props){
     </Routes>
     </AnimatePresence>
     </Layout>
+  
    
 
   );

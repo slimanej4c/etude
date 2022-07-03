@@ -1,8 +1,123 @@
-import React from 'react';
+
+
+
+import React, { useState } from 'react';
+
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+
+import '../css/Flow.css'
+
+
+
+const ImageSlider = () => {
+  
+const SliderData = [
+  {
+    image:
+     require('../../Assets/domaine.jpg'),
+    domaine:"domaine d'activité"
+  },
+  {
+    image:
+    require('../../Assets/back3.jpg'),
+    domaine:"blog"
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80',
+      domaine:"moyens",
+  
+    },
+ 
+];
+  const [current, setCurrent] = useState(0);
+  const [slide_class,setslide_class]=useState('slide')
+  const [slide_active,setslide_active]=useState(true)
+  const [slide_not_active,setslide_not_active]=useState(true)
+console.log('helo............................')
+console.log('helo............................')
+console.log('helo............................')
+
+ 
+  const length = SliderData.length;
+
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+    {!slide_active && setslide_active(true)} 
+  
+   
+  };
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+    {slide_active && setslide_active(false)} 
+  };
+
+  if (!Array.isArray(SliderData) || SliderData.length <= 0) {
+    return null;
+  }
+
+  return (
+
+    <section className='slider'>
+      <FaArrowAltCircleLeft className='left-arrow'  onClick={ nextSlide} />
+      <FaArrowAltCircleRight className='right-arrow'  onClick={prevSlide}/>
+   
+      {SliderData.map((slide, index) => {
+         
+         {if(index===current){
+          
+          return (
+            <div className='images'>
+            <div
+              className={slide_active ? 'slide_moins' :'slide_moins2' }
+              key={index}
+            >
+               <h2>{index===0 ? SliderData[SliderData.length-1]['domaine'] :SliderData[index-1]['domaine']}</h2>
+              
+                <img src={index===0 ? SliderData[SliderData.length-1]['image'] :SliderData[index-1]['image']} alt='travel image' className='image' />
+              
+            </div>
+            <div
+            className={slide_active ? 'slide' :'slide2' }
+            key={index}
+          >
+            {index === current && ( <h2>{slide.domaine}</h2>)}
+            {index === current && (
+             
+              <img src={slide.image} alt='travel image' className='image' />
+         )}
+          </div>
+          <div
+              className={slide_active ? 'slide_plus' :'slide_plus2' }
+              key={index}
+            >
+              <h2>{index===SliderData.length-1? SliderData[0]['domaine'] : SliderData[index+1]['domaine']}</h2>
+              
+                <img src={index===SliderData.length-1? SliderData[0]['image'] : SliderData[index+1]['image']} alt='travel image' className='image' />
+              
+            </div>
+          </div>
+          );
+
+        }}
+        
+       
+       
+      })}
+    
+    </section>
+ 
+  );
+};
+
+export default ImageSlider;
+
+/*import React from 'react';
 import ReactDOM from 'react-dom';
 import Coverflow from 'react-coverflow';
 import { StyleRoot } from 'radium';
-import '../css/Flow.css'
+
 const slides = [
   {
     title: "Machu Picchu",
@@ -156,4 +271,4 @@ function Flow() {
 }
 
 
-export default Flow
+export default Flow*/
