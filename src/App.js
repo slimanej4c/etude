@@ -10,6 +10,7 @@ import Deplome from "./Containers/Deplome";
 import { motion , AnimatePresence  } from 'framer-motion';
 import Experiece from "./Containers/Experiece";
 import Contact from "./Containers/Contact";
+import Aprops from "./Containers/Aprops";
 
 function App(props){
    const location=useLocation()
@@ -22,6 +23,7 @@ function App(props){
      <Route exact path='/etude' element={<Home/>}></Route>
      <Route exact path='/experience' element={<Experiece/>}></Route>
      <Route exact path='/contact' element={<Contact/>}></Route>
+     <Route exact path='/aprops' element={<Aprops/>}></Route>
     
     </Routes>
     </AnimatePresence>

@@ -1,0 +1,134 @@
+.aprops-container{
+
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 80px;
+
+}
+@font-face {
+    font-family: imported;
+    src: url('../../Assets/fonts/Shrikhand-Regular.ttf');
+    size: 14px;
+  }
+.aprops-div{
+
+    width:80%;
+}
+
+  .aprops-text{
+    font-size: 16px;
+    margin-left: 40px;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--bg);
+    opacity: 0.8;
+}
+
+.aprops-sous-title{
+    font-size: 16px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--bg);
+    opacity: 0.8;
+   
+}
+.aprops-title{
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    font-size: 20px;
+    color:rgb(0, 46, 65);
+    opacity: 0.7;
+}
+
+.aprops-line{
+
+    width:80%;
+    margin-top: 30px;
+    height: 1px;
+    background-color: var(--bg);
+}
+@media screen and (max-width: 768px) {
+    .aprops-text{
+
+        font-size: 14px;
+        margin-left: 30px;
+       
+    }
+    .aprops-title{
+
+        font-size: 18px;
+        
+    }
+    .aprops-sous-title{
+
+      
+        font-size: 15px;
+        margin-left: 15px;
+    }
+    .aprops-container{
+
+        margin-top:40px;
+        margin-bottom: 40px;
+  
+  }
+
+}
+@media screen and (max-width: 600px) {
+    .aprops-text{
+
+        font-size: 13px;
+        margin-left: 20px;
+       
+    }
+    .aprops-title{
+
+        font-size: 16px;
+        
+    }
+    .aprops-sous-title{
+
+      
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    
+    .aprops-container{
+
+        margin-top:30px;
+        margin-bottom: 30px;
+  
+  }
+
+}
+@media screen and (max-width: 500px) {
+    .aprops-text{
+
+        font-size: 12px;
+        margin-left: 10px;
+       
+    }
+    .aprops-title{
+
+        font-size: 14px;
+        
+    }
+    .aprops-sous-title{
+
+      
+        font-size: 13px;
+        margin-left: 5px;
+    }
+    .aprops-container{
+
+        margin-top:20px;
+        margin-bottom: 20px;
+  
+  }
+
+
+}

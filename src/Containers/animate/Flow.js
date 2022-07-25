@@ -1,15 +1,50 @@
 
 
 
-import React, { useState } from 'react';
+import React, { useState ,useEffect } from 'react';
 
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+import { motion , AnimatePresence  } from 'framer-motion';
 
 import '../css/Flow.css'
 
 
 
 const ImageSlider = () => {
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 700);
+  const [bigright, setbigright] = useState(window.innerWidth*55/100 );
+  const [smalright, setsmalright] = useState(window.innerWidth*50/200 );
+  const [smalleft, setsmalleft] = useState(window.innerWidth*50/-200 );
+  const [bigleft, setbigleft] = useState(window.innerWidth*55/-100 );
+  console.log('print is mobil',isMobile,bigright)
+
+ /* document.body.style.setProperty(
+    "--c",`#ff9b77`
+    
+  );
+  document.body.style.setProperty(
+    "--c",`#77c4ff`
+    
+  );*/
+  var c= window.getComputedStyle(document.getElementById("root")).getPropertyValue("--c")
+  const setdim=()=>{
+
+   
+    setbigright(window.innerWidth*40/100 );
+    setsmalright(window.innerWidth*50/200 );
+    setsmalleft(window.innerWidth*50/-200 );
+    setbigleft(window.innerWidth*40/-100 );
+  }
+ useEffect(() => {
+  console.log('value css',  window.getComputedStyle(document.getElementById("root")).getPropertyValue("--c"))
+  
+ }, [ window.innerWidth])
+
+  console.log('value css',  window.getComputedStyle(document.getElementById("root")).getPropertyValue("--c"))
+  console.log('value css',  window.getComputedStyle(document.getElementById("root")).getPropertyValue("--c"))
+
+
+
   
 const SliderData = [
   {
@@ -43,12 +78,14 @@ console.log('helo............................')
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
+    setdim()
     {!slide_active && setslide_active(true)} 
   
    
   };
 
   const prevSlide = () => {
+    setdim()
     setCurrent(current === 0 ? length - 1 : current - 1);
     {slide_active && setslide_active(false)} 
   };
@@ -56,6 +93,24 @@ console.log('helo............................')
   if (!Array.isArray(SliderData) || SliderData.length <= 0) {
     return null;
   }
+  
+
+const anim=(x,y,s1,s2,i)=>{
+  
+  const animation={
+
+    initial:{left:x ,scale:s1 , zIndex:i},
+   
+   
+    animate:{left:y ,scale:s2},
+    exit:{opacity:1},
+}
+return animation
+
+}
+///////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////
 
   return (
 
@@ -68,35 +123,38 @@ console.log('helo............................')
          {if(index===current){
           
           return (
-            <div className='images'>
-            <div
-              className={slide_active ? 'slide_moins' :'slide_moins2' }
-              key={index}
+            <div className='images' key={index}>
+            <motion.div
+             className={'slide_moins'  }
+             animate='animate' initial= 'initial' variants={slide_active ? anim(smalright, 0,2,1,3):anim(bigright, 0,1,1,1)} transition={{duration:2,ease: "easeOut",} }
+            
             >
                <h2>{index===0 ? SliderData[SliderData.length-1]['domaine'] :SliderData[index-1]['domaine']}</h2>
               
                 <img src={index===0 ? SliderData[SliderData.length-1]['image'] :SliderData[index-1]['image']} alt='travel image' className='image' />
               
-            </div>
-            <div
-            className={slide_active ? 'slide' :'slide2' }
-            key={index}
+            </motion.div>
+            <motion.div
+            className={ 'slide' }
+            animate='animate' initial= 'initial' variants={slide_active ? anim(smalright , 0,1,2,3):anim(smalleft , 0,1,2,3)} transition={{duration:2,ease: "easeOut",} }
+            
           >
             {index === current && ( <h2>{slide.domaine}</h2>)}
             {index === current && (
              
               <img src={slide.image} alt='travel image' className='image' />
          )}
-          </div>
-          <div
-              className={slide_active ? 'slide_plus' :'slide_plus2' }
-              key={index}
+          </motion.div>
+          <motion.div
+              className={ 'slide_plus'  }
+              animate='animate' initial= 'initial' variants={slide_active ? anim(bigleft , 0,1,1,2):anim(smalleft , 0,2,1,2)} transition={{duration:2,ease: "easeOut",} }
+             
             >
               <h2>{index===SliderData.length-1? SliderData[0]['domaine'] : SliderData[index+1]['domaine']}</h2>
               
                 <img src={index===SliderData.length-1? SliderData[0]['image'] : SliderData[index+1]['image']} alt='travel image' className='image' />
               
-            </div>
+            </motion.div>
           </div>
           );
 
@@ -272,3 +330,37 @@ function Flow() {
 
 
 export default Flow*/
+
+
+/*return (
+            <div className='images'>
+            <div
+              className={slide_active ? 'slide_moins' :'slide_moins2' }
+              key={index}
+            >
+               <h2>{index===0 ? SliderData[SliderData.length-1]['domaine'] :SliderData[index-1]['domaine']}</h2>
+              
+                <img src={index===0 ? SliderData[SliderData.length-1]['image'] :SliderData[index-1]['image']} alt='travel image' className='image' />
+              
+            </div>
+            <div
+            className={slide_active ? 'slide' :'slide2' }
+            key={index}
+          >
+            {index === current && ( <h2>{slide.domaine}</h2>)}
+            {index === current && (
+             
+              <img src={slide.image} alt='travel image' className='image' />
+         )}
+          </div>
+          <div
+              className={slide_active ? 'slide_plus' :'slide_plus2' }
+              key={index}
+            >
+              <h2>{index===SliderData.length-1? SliderData[0]['domaine'] : SliderData[index+1]['domaine']}</h2>
+              
+                <img src={index===SliderData.length-1? SliderData[0]['image'] : SliderData[index+1]['image']} alt='travel image' className='image' />
+              
+            </div>
+          </div>
+          );*/
