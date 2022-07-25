@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/etude/static/css/main.d5ce8b0a.css",
-    "main.js": "/etude/static/js/main.6e27d083.js",
+    "main.css": "/etude/static/css/main.be0ea48b.css",
+    "main.js": "/etude/static/js/main.91f0d4c9.js",
     "static/media/back3.jpg": "/etude/static/media/back3.877fa5058d16cfaa477f.jpg",
+    "static/media/Shrikhand-Regular.ttf": "/etude/static/media/Shrikhand-Regular.5ff5e889191a6c359fa4.ttf",
     "static/media/domaine.jpg": "/etude/static/media/domaine.84e46684f2c32a7bf036.jpg",
     "static/media/photo_profile.jpg": "/etude/static/media/photo_profile.ac225de0f9e28d9ef3c0.jpg",
     "static/media/logo.jpeg": "/etude/static/media/logo.5d3c6b1d8098567bd902.jpeg",
     "index.html": "/etude/index.html",
-    "main.d5ce8b0a.css.map": "/etude/static/css/main.d5ce8b0a.css.map",
-    "main.6e27d083.js.map": "/etude/static/js/main.6e27d083.js.map"
+    "main.be0ea48b.css.map": "/etude/static/css/main.be0ea48b.css.map",
+    "main.91f0d4c9.js.map": "/etude/static/js/main.91f0d4c9.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5ce8b0a.css",
-    "static/js/main.6e27d083.js"
+    "static/css/main.be0ea48b.css",
+    "static/js/main.91f0d4c9.js"
   ]
 }
